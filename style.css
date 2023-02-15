@@ -1,0 +1,145 @@
+:root {
+    /* ### Primary */
+    --Dark-cyan: hsl(158, 36%, 37%);
+    --Cream: hsl(30, 38%, 92%);
+    /* ### Neutral */
+    --Very-dark-blue: hsl(212, 21%, 14%);
+    --Dark-grayish-blue: hsl(228, 12%, 48%);
+    --White: hsl(0, 0%, 100%)
+}
+
+body {
+    background-color: var(--Cream, white);
+    margin: 0;
+    font-family: 'Montserrat', sans-serif;
+
+}
+
+* {
+    box-sizing: border-box;
+}
+
+.wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+}
+
+
+.container {
+    overflow: hidden;
+    border-radius: 15px;
+    display: flex;
+    width: 600px;
+    background-color: var(--White);
+    -webkit-border-radius: 15px;
+    -moz-border-radius: 15px;
+    -ms-border-radius: 15px;
+    -o-border-radius: 15px;
+}
+
+@media (max-width:768px) {}
+
+img {
+    flex: 1 0 50%;
+    object-fit: cover;
+}
+
+.text {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 35px;
+}
+
+.product-type {
+    color: var(--Dark-grayish-blue);
+    font-size: 13px;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+}
+
+.product-name {
+    font-family: 'Fraunces', serif;
+    font-weight: 700;
+    color: var(--Very-dark-blue);
+}
+
+.product-info {
+    margin: 0;
+    font-size: 14px;
+    color: var(--Dark-grayish-blue);
+}
+
+.price {
+    display: flex;
+    align-items: center;
+    margin: 40px 0;
+}
+
+.price span:first-child {
+    font-family: 'Fraunces', serif;
+    font-weight: 700;
+    color: var(--Dark-cyan);
+    font-size: 27px;
+    margin-right: 20px;
+}
+
+.price span:last-child {
+    font-size: 14px;
+    color: var(--Dark-grayish-blue);
+    text-decoration: line-through;
+}
+
+.buy {
+    width: 100%;
+    height: 40px;
+    background-color: var(--Dark-cyan);
+    color: white;
+    font-weight: 700;
+    border-radius: 10px;
+    border: none;
+    font-size: 13px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+}
+
+.attribution {
+    color: white;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    text-align: center;
+    width: 100%;
+    background-color: var(--Very-dark-blue);
+    font-size: 12px;
+}
+
+.attribution a {
+    color: brown;
+}
+
+@media only screen and (max-width: 600px) {
+    .container {
+        width: 400px;
+        flex-direction: column;
+        margin: 8px;
+
+    }
+
+    img {
+        width: 100%;
+    }
+
+    .product-name {
+        margin-top: 10px;
+    }
+
+    .product-name,
+    .product-info,
+    .price {
+        margin-bottom: 10px;
+    }
+}
